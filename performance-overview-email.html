@@ -59,7 +59,16 @@
             background-color: white !important;
         }
         .total-row td {
-            border: 2px solid #17A2B8;
+            border-top: 2px solid #17A2B8;
+            border-bottom: 2px solid #17A2B8;
+            border-left: none;
+            border-right: none;
+        }
+        .total-row td:first-child {
+            border-left: 2px solid #17A2B8;
+        }
+        .total-row td:last-child {
+            border-right: 2px solid #17A2B8;
         }
         .positive {
             color: #17A2B8;
