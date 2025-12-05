@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarterly Fund Fee Notification</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2C3345;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .email-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 20px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #2C3345;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+        }
+        th {
+            background-color: #DCF4F9;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            color: #2C3345;
+            border: 1px solid #b8e6ea;
+        }
+        td {
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .total-row {
+            font-weight: 700;
+            background-color: #F9F9F9 !important;
+        }
+        .total-row td {
+            border: 2px solid #D2E7EC;
+        }
+        .positive {
+            color: #17A2B8;
+        }
+        .negative {
+            color: #e57373;
+        }
+        .callout {
+            background-color: #f5f5f5;
+            border-left: 4px solid #17A2B8;
+            padding: 15px 20px;
+            margin: 20px 0;
+        }
+        .callout h3 {
+            margin-top: 0;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .callout ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .callout li {
+            margin-bottom: 5px;
+        }
+        a {
+            color: #17A2B8;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .signature {
+            margin-top: 30px;
+        }
+        .section-divider {
+            margin: 40px 0;
+            border-top: 2px solid #e0e0e0;
+        }
+        .info-box {
+            background-color: #f5f5f5;
+            border-left: 4px solid #17A2B8;
+            padding: 15px 20px;
+            margin: 15px 0 30px 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .info-box ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .info-box li {
+            margin-bottom: 5px;
+        }
+        .info-box li:last-child {
+            margin-bottom: 0;
+        }
+        .fee-highlight {
+            background-color: #DCF4F9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .fee-highlight .amount {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2C3345;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .fee-highlight .label {
+            font-size: 14px;
+            color: #525866;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <p><strong>Hi Testing,</strong></p>
+
+        <p>This is your fund fee notification for <strong>Q1 2025</strong> (<strong>1 January – 1 April 2025</strong>). Based on your Assets Under Management during this period, a fund fee of <strong>$3,523.49</strong> has been withdrawn from your account.</p>
+
+        <div class="fee-highlight">
+            <span class="amount">$3,523.49</span>
+            <span class="label">Quarterly Fund Fee Withdrawn</span>
+        </div>
+
+        <h2>Fund Fee Breakdown by Account</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Fund</th>
+                    <th>Avg. Daily AUM</th>
+                    <th>Quarterly Fee</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Trading</td>
+                    <td>$167,315</td>
+                    <td>$824.86</td>
+                </tr>
+                <tr>
+                    <td>Securities</td>
+                    <td>$428,707</td>
+                    <td>$2,113.68</td>
+                </tr>
+                <tr>
+                    <td>Fixed Income</td>
+                    <td>$108,674</td>
+                    <td>$535.67</td>
+                </tr>
+                <tr class="total-row">
+                    <td><strong>Total</strong></td>
+                    <td><strong>$704,696</strong></td>
+                    <td><strong>$3,523.49</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="info-box">
+            <ul>
+                <li><strong>Avg. Daily AUM</strong> - The average daily Assets Under Management for each fund during the quarter.</li>
+                <li><strong>Quarterly Fee</strong> - Calculated as: (Avg. Daily AUM x 2% Annual Rate x Days in Period) / 365</li>
+            </ul>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="callout">
+            <h3>How is the Annual Fund Fee calculated?</h3>
+            <p>The Annual Fund Fee is derived by applying a yearly fund fee rate of <strong>2%</strong> based on daily Assets Under Management. This fee is calculated daily and withdrawn quarterly to ensure transparent and predictable fee management.</p>
+            <ul>
+                <li>The 2% annual rate is applied pro-rata based on the actual number of days in each quarter.</li>
+                <li>Daily AUM is calculated at the end of each trading day.</li>
+                <li>The fee covers fund administration, custody, and operational costs.</li>
+            </ul>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <h2>Fee Schedule</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Quarter</th>
+                    <th>Period</th>
+                    <th>Transaction Date</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Q1</td>
+                    <td>1 Jan – 1 Apr</td>
+                    <td>1 Apr 2025</td>
+                    <td>$3,523.49</td>
+                </tr>
+                <tr>
+                    <td>Q2</td>
+                    <td>1 Apr – 1 Jul</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Q3</td>
+                    <td>1 Jul – 1 Oct</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Q4</td>
+                    <td>1 Oct – 1 Jan</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="section-divider"></div>
+
+        <h2>Fund Fee Overview</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Period</th>
+                    <th>Avg. Daily AUM</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2025</td>
+                    <td>1 Jan – 1 Apr</td>
+                    <td>$704,696</td>
+                    <td>$3,523.49</td>
+                </tr>
+                <tr>
+                    <td>2024</td>
+                    <td>1 Jan – 31 Dec</td>
+                    <td>$658,420</td>
+                    <td>$13,168.40</td>
+                </tr>
+                <tr>
+                    <td>2023</td>
+                    <td>1 Jan – 31 Dec</td>
+                    <td>$542,150</td>
+                    <td>$10,843.00</td>
+                </tr>
+                <tr class="total-row">
+                    <td><strong>Total</strong></td>
+                    <td></td>
+                    <td></td>
+                    <td><strong>$27,534.89</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="info-box">
+            <p><strong>Avg. Daily AUM</strong> is calculated by summing the end-of-day balance across all fund accounts for each day in the period, then dividing by the total number of days. This method ensures fees reflect actual assets held throughout the year, rather than point-in-time snapshots.</p>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="callout">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">View this transaction in Transaction History</a></li>
+                <li><a href="#">Download Fee Statement (PDF)</a></li>
+                <li><a href="#">Learn more about our fee structure</a></li>
+            </ul>
+        </div>
+
+        <p>The complete transaction details are now available in your <a href="#">Transaction History</a>. If you have any questions about this fee or your account, please don't hesitate to reach out.</p>
+
+        <div class="signature">
+            <p>Thanks for your continued trust,<br>
+            <strong>Elite CurrenSea Team</strong></p>
+        </div>
+    </div>
+</body>
+</html>
